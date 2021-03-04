@@ -15,6 +15,7 @@
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li><a href="/#/projects" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Projets</a></li>
+          <li><a href="/#/project/create" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Créer un projet</a></li>
           <li><a href="/#/tasks" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Taches</a></li>
           <li><a href="/#/milestones" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Jalon</a></li>
         </ul>

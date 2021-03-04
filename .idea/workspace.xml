@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c565bb0-2596-4ef1-92ab-c8b91440c737" name="Default Changelist" comment="" />
+    <list default="true" id="4c565bb0-2596-4ef1-92ab-c8b91440c737" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/project/ProjectShow.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/project/Projects.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NotFound.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotFound.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProjectShow.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projects.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/Tasks.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Task.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Task.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1pFbOA1FDRw2BBXQ7ilQehGK2A5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,12 +32,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/requirements" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Said\Desktop\ESIMED\Projet\front\frontEsimedGestionProjet\src\components\requirements" />
+      <recent name="D:\Users\Said\Desktop\ESIMED\Projet\front\frontEsimedGestionProjet\src" />
+      <recent name="D:\Users\Said\Desktop\ESIMED\Projet\front\frontEsimedGestionProjet\src\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Said\Desktop\ESIMED\Projet\front\frontEsimedGestionProjet\src\components\task" />
+      <recent name="D:\Users\Said\Desktop\ESIMED\Projet\front\frontEsimedGestionProjet\src\components\project" />
       <recent name="D:\Users\Said\Desktop\ESIMED\Projet\front\frontEsimedGestionProjet\src" />
     </key>
   </component>
@@ -35,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614781750626</updated>
       <workItem from="1614781752849" duration="39000" />
-      <workItem from="1614781805809" duration="5080000" />
+      <workItem from="1614781805809" duration="15319000" />
+      <workItem from="1614840483120" duration="7913000" />
     </task>
     <servers />
   </component>
@@ -43,9 +69,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="225" key="search.everywhere.popup" timestamp="1614786487302">
+    <state width="498" height="445" key="SwitcherDM" timestamp="1614788918070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" key="search.everywhere.popup/1920.2.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1614786487302" />
+    <state width="498" height="445" key="SwitcherDM/1920.2.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1614788918070" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614842756962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.2.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1614842756962" />
   </component>
 </project>
