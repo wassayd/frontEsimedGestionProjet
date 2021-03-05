@@ -1,24 +1,24 @@
 <script>
     import axios from "axios";
-    export let tasks;
+    export let requirements;
 
     let isModalDeleteProjectShown = false;
-    let selectedTask = {};
+    let selectedRequirement = {};
 
-    function showModalDelete(task){
+    function showModalDelete(requirement){
         isModalDeleteProjectShown = true;
-        selectedTask = task;
+        selectedRequirement = requirement;
     }
 
     function deleteExigence() {
-        axios.delete("https://localhost:5001/api/Tasks/"+selectedTask.id)
-                .then(res => {
-                    console.log(res);
-                    window.location.reload();
-                })
-                .catch(err => {
-                    console.log(err)
-                })
+        axios.delete("https://localhost:5001/api/Requirements/"+selectedRequirement.id)
+        .then(res => {
+            console.log(res);
+            window.location.reload();
+        })
+        .catch(err => {
+            console.log(err)
+        })
     }
 
     function hideModal() {
@@ -31,35 +31,37 @@
         <div class="flex flex-col lg:flex-row">
             <div class="mb-6 lg:mb-0 lg:w-1/2 lg:pr-5">
                 <h2 class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                    Tâches
+                    Exigence
                 </h2>
             </div>
             <div class="lg:w-1/2" style="display: flex;justify-content: flex-end;">
-                <a href="/#/task/create" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Créer une tâche</a>
+                <a href="/#/requirement/create" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Créer une exigence</a>
             </div>
         </div>
         <div class="mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div class="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {#each tasks as task, i}
+                {#each requirements as requirement, i}
                     <div class="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
                         <div class="p-5">
-                            <p class="mb-2 font-bold">Tâche {i+1}</p>
+                            <p class="mb-2 font-bold">Exigence {i+1}</p>
                             <p class="text-sm leading-5 text-gray-900">
-                                Label : {task.label}
+                               Description : {requirement.description}
                             </p>
                             <p class="text-sm leading-5 text-gray-900">
-                                Description : {task.description}
+                                Fonctionnel : {requirement.isFunctional ? "oui" : "non"}
                             </p>
-                            <p class="text-sm leading-5 text-gray-900">
-                                Charge : {task.nbDay} {task.nbDay > 1 ? "jours" : "jour"}
-                            </p>
+                            {#if !requirement.isFunctional}
+                                <p class="text-sm leading-5 text-gray-900">
+                                    Type d'exigence : {requirement.requirementNoneFunctional}
+                                </p>
+                            {/if}
                             <br>
-                            <a href="/#/task/{task.id}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-eye"></i></a>
-                            <a on:click={_=>showModalDelete(task)} class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-trash-alt"></i></a>
-                            <a href="/#/task/{task.id}/edit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-pen"></i></a>
+                            <a href="/#/requirement/{requirement.id}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-eye"></i></a>
+                            <a on:click={_=>showModalDelete(requirement)} class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-trash-alt"></i></a>
+                            <a href="/#/requirement/{requirement.id}/edit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-pen"></i></a>
                         </div>
                         <div class="w-full h-1 ml-auto duration-300 origin-left transform scale-x-0 bg-deep-purple-accent-400 group-hover:scale-x-100"></div>
-                    </div>
+                </div>
                 {/each}
             </div>
         </div>
@@ -109,7 +111,7 @@
                         </h3>
                         <div class="mt-2">
                             <p class="text-sm text-gray-500">
-                                Vous êtes sur le point de supprimer la tâche ?
+                                Vous êtes sur le point de supprimer l'exigence ?
                             </p>
                         </div>
                     </div>

@@ -9,6 +9,10 @@
 	import ProjectEdit from './components/project/ProjectEdit.svelte'
 	import ProjectCreate from './components/project/ProjectCreate.svelte'
 	import RequirementCreate from './components/requirements/RequirementCreate.svelte'
+	import RequirementShow from './components/requirements/RequirementShow.svelte'
+	import RequirementUpdate from './components/requirements/RequirementUpdate.svelte'
+	import TaskCreate from './components/task/TaskCreate.svelte'
+	import TaskUpdate from './components/task/TaskUpdate.svelte'
 
 	const routes = {
 		'/projects': Project,
@@ -17,13 +21,21 @@
 
 		'/project/create': ProjectCreate,
 
-		'/requirment/create' : RequirementCreate,
+		'/requirement/create' : RequirementCreate,
+
+		'/requirement/:guid' : RequirementShow,
+
+		'/requirement/:guid/edit' : RequirementUpdate,
 
 		'/project/:guid': ProjectShow,
 
 		'/project/:guid/edit': ProjectEdit,
 
 		'/tasks': Task,
+
+		'/task/create': TaskCreate,
+
+		'/task/:guid/edit': TaskUpdate,
 
 		'*': NotFound
 	}
@@ -37,7 +49,6 @@
 <Footer/>
 
 <style>
-
 #PageContent{
 	min-height: 54vh;
 }

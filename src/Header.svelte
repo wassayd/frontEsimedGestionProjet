@@ -16,8 +16,8 @@
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li><a href="/#/projects" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Projets</a></li>
           <li><a href="/#/project/create" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Créer un projet</a></li>
-          <li><a href="/#/tasks" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Taches</a></li>
-          <li><a href="/#/milestones" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Jalon</a></li>
+          <li><a href="/#/task/create" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Créer une tache</a></li>
+          <li><a href="/#/requirement/create" class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400">Créer une exigence</a></li>
         </ul>
       </div>
     </div>

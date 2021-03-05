@@ -1,16 +1,22 @@
 <script>
     import axios from "axios"
     import Project from "../../models/Project"
+    import Requirement from "../../models/Requirement"
 
     const url = "https://localhost:5001/api/Projects";
     
     let projects = [];
+    let requirements = [];
     let isModalDeleteProjectShown = false;
     let selectedProject = {};
 
     axios.get(url)
     .then(res =>  {
         for(let project of res.data) {
+            for (let requirement of project.requirements) {
+                requirements = [...requirements, Object.assign(new Requirement, requirement)]
+            }
+            project.requirements = requirements;
             projects = [...projects, Object.assign(new Project, project)]
         }
     });
@@ -63,13 +69,13 @@
                             Chef de projet : {project.user.firstName} {project.user.lastName}
                         </p>
                         <p class="text-sm leading-5 text-gray-900">
-                            Nombre de taches : {project.tasks}
+                            Nombre de taches : {project.tasks.length}
                         </p>
                         <p class="text-sm leading-5 text-gray-900">
                             Nombre de jalons : {project.milestones}
                         </p>
                         <p class="text-sm leading-5 text-gray-900">
-                            Progression : ??
+                            Progression : 0%
                         </p>
                         <br>
                         <a href="/#/project/{project.id}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-eye"></i></a>
@@ -83,7 +89,6 @@
     </div>
 </div>
 
-<!-- This example requires Tailwind CSS v2.0+ -->
 <div class="fixed {isModalDeleteProjectShown ? '' : 'hidden'} z-10 inset-0 overflow-y-auto">
     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <!--
